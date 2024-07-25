@@ -1,13 +1,8 @@
-cont express = require('express');
-const sequelize = require('./config/connection');
+const express = require('espress');
 
-cont app = express();
-cont PORT = process.env.PORT 3001;
+const app = express();
+const PORT = process.env.port || 3001;
 
-sequelize.sync().then(() => {
 app.listen(PORT, () => {
-  console.log('server started!')
+  console.log('server started!');
 })
-});
-
-
