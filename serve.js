@@ -1,6 +1,9 @@
 const express = require('espress');
 const sequelize =require('/config/connection')
 
+const model = require('./models/Task');
+
+
 const app = express();
 const PORT = process.env.port || 3001;
 

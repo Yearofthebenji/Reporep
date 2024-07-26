@@ -22,7 +22,11 @@ description: {
 status: {
     type: DataTypes.TEXT
     allowNull: false
-
-
 }
+sequelize,
+freezeTableName: true,
+underscored: true,
+modelName: 'task'
 }){}
+
+module.exports =Task;
