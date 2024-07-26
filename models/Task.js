@@ -10,7 +10,7 @@ Task.init({
           primaryKey: true,
           autoIncrement: true
 },
-name: {
+name: { 
           Type: DataTypes.STRING,
           allowNull: false
         },

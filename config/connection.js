@@ -1,14 +1,12 @@
 const sequelize = require('sequelize');
+require('detonev').config();
 
-const sequelize = new Sequelize(
-  "todo_app_db",
-  "postgres",
-  "theskyisbluetoday",
+const sequelize = new Sequelize(process.env.PICKACHU_DB, process.env.PICKACHU_USER,
+process.env.PICKACHU_PW,
 {
-    host: 'localhost',
-    dialect: 'postgres'
+    host:"locoalhost",
+    dialect: 'postgress'
 }
 )
-
 
 module.exports = sequelize;
