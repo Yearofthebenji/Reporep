@@ -1,44 +1,16 @@
-const router = require("express").Router();
-const Task = require('../../models/Task');
-//localhost:3001/api/
+const router = require('express').Router();
+const api = require('./api');
 
-router.post('/', (req, res) =. {
+//localhost:3001/api
+router.use("/api", api);
 
-
-  const alltasks = await Task.findaAll();
-  
-  res.status(200).json(allTasks);
-  {catch (err) {
-    res.status(500).json(err);
-  }
-  
-  
-  }
-  
-
-
-
-
-
-
+router.get('/', (req, res) +> {
+    res.render('todo');
 })
 
-  //const {name, descripiton, status} = req.body; object destructing
-
-
-  const newTask = await Task.create({
-   name: req.body.name,
-   description: req.body.description,
-   status: req.body.descripiton
-  })
-
- 
-    description: 'Feed Pikachu he is hungry
-    status: 'todo'
-  });
-
-res.json(newTask);
-
+//localhost:3001/pikachu
+router.get("/pikachu", (req, res) => {
+res.json("hello Pikachu!");
 })
 
-module.exports = router;
+module.exports - router;
