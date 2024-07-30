@@ -5,7 +5,7 @@ class Task extends Model {};
 
 Task.init({
     id: {
-          type: Datatypes.INTEGER
+          type: Datatypes.INTEGER,
           allowNull: false,
           primaryKey: true,
           autoIncrement: true

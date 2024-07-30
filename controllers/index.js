@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Task = require('../../models/Task');
+const Task = require('../models/Task');
 
 
 //localhost:3001/api/
