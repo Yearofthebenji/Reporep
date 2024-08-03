@@ -1,33 +1,26 @@
 const router = require("express").Router();
 const Task = require('../models/Task');
 
-
-//localhost:3001/api/
-router.post('/', (req, res) = {
-  const alltasks = await Task.findaAll();
+router.get('/', async(req, res) => {
+  try {
+    const alltasks = await Task.findAll();
   
-  res.status(200).json(allTasks);
-  {catch (err) {
+    res.status(200).json(allTasks);
+  } catch (err) {
     res.status(500).json(err);
   }
   
-  
-  }
-  
+})
 
+//localhost:3001/api/
+router.post('/', async (req, res) =>{
+//const {name, descripiton, status} = req.body; object destructing
 
-
-
-
-
-
-
-  //const {name, descripiton, status} = req.body; object destructing
-
+})
 
   const newTask = await Task.create({
     const
-    description: 'Feed Pikachu he is hungry
+    description: 'Feed Pikachu he is hungry'
     status: 'todo'
   });
 
@@ -35,6 +28,6 @@ router.post('/', (req, res) = {
 
 res.json(newTask);
 
-})
+
 
 module.exports = router;
