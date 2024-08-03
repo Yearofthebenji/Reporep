@@ -18,11 +18,7 @@ router.post('/', async (req, res) =>{
 
 })
 
-  const newTask = await Task.create({
-    const
-    description: 'Feed Pikachu he is hungry'
-    status: 'todo'
-  });
+
 
 
 

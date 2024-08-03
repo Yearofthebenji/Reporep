@@ -17,7 +17,7 @@ name: {
           description: {
       type: DataTypes.TEXT,
       allowNull: false 
-          }
+          },
          status: {
             type: DataTypes.STRING,
             allowNull: false
@@ -30,5 +30,5 @@ name: {
           freezeTableName: true,
           underscored: true,
           modelName: 'task'
-}. {})
+})
 module.exports = Task;
