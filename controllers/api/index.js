@@ -4,14 +4,17 @@ const Task = required('../../models/Task');
 
 //localhost:3001/api
 router.post('/',async (req, res) => {
-    const newTaask = Task.create({
-        name: 'Feed Pikachu',
-        description: 'Feed Pikachu he is hungry',
-        status: 'todo'
+    //const { name, description, status} = req.body; Object Destructuring
+    
+    const newTask = await Task.create({
+        name: req.body.name,
+        description: req.body.name,
+        status: req.body.status
 });
-
-
 res.json(newTask);
+}catch (err) {
+    res.status(500).json(err); 
+
 })
 
 router.use("/api", api);
