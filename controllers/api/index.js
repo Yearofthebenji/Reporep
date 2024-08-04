@@ -1,8 +1,19 @@
 const router = require('express').Router();
 const api = require('./api');
-const Task = required('../models/Task');
+const Task = required('../../models/Task');
 
 //localhost:3001/api
+router.post('/',async (req, res) => {
+    const newTaask = Task.create({
+        name: 'Feed Pikachu',
+        description: 'Feed Pikachu he is hungry',
+        status: 'todo'
+});
+
+
+res.json(newTask);
+})
+
 router.use("/api", api);
 
 router.get('/', async(req, res) => {
