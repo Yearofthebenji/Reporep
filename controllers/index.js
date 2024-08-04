@@ -1,7 +1,10 @@
 const router = require("express").Router();
-const Task = require('../models/Task');
+const api = require('./api');
 
-router.get('/', async(req, res) => {
+router.use("api", api);
+
+router.get("/pikachu", async(req, res) => {
+  res.json('hello pikachu');
   try {
     const alltasks = await Task.findAll();
   
@@ -22,7 +25,7 @@ router.post('/', async (req, res) =>{
 
 
 
-res.json(newTask);
+res.json('hello Pikachu!');
 
 
 
